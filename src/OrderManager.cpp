@@ -12,7 +12,7 @@ string OrderManager::placeOrder(const Order& order) {
         {"amount", std::to_string(order.quantity)}
     };
     
-    std::string response = apiClient.sendRequest("/private/buy", params);
+    string response = apiClient.sendRequest("/private/buy", params);
     return response;
 }
 

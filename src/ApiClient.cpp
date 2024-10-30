@@ -22,7 +22,7 @@ std::string ApiClient::sendRequest(const string& endpoint, const unordered_map<s
         }
         
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, [](void* contents, size_t size, size_t nmemb, std::string* response) -> size_t {
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, [](void* contents, size_t size, size_t nmemb, string* response) -> size_t {
             response->append((char*)contents, size * nmemb);
             return size * nmemb;
         });

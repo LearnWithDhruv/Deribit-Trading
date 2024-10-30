@@ -24,6 +24,6 @@ void OrderbookManager::displayOrderbook(const string& symbol) {
             cout << "Price: " << ask[0].asDouble() << " | Quantity: " << ask[1].asDouble() << "\n";
         }
     } else {
-        std::cerr << "Failed to parse orderbook data." << std::endl;
+        cerr << "Failed to parse orderbook data." << std::endl;
     }
 }
